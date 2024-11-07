@@ -60,5 +60,7 @@ Para rodar o código acima no Visual Studio Code (uma vez que a extensão do Jul
 
 |[Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/RodarI.png)
 
+asdasd
+
 ![Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/Resultado.PNG)
 
