@@ -65,7 +65,7 @@ No REPL do Julia
 ![Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/REPL.PNG)
 
 rode o comando 
-'''julia
+```julia
 include(Dir)
 ```
 
