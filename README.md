@@ -17,7 +17,7 @@ Por exemplo, o GLPK é um solucionador para problemas de programação linear (L
 Vamos resolver o seguinte problema de programação linear usando o JuMP e o GLPK. Primeiro, veremos o código completo para resolver o problema e depois o analisaremos passo a passo.
 Aqui está o problema:
 
-![Alt text](https://example.com/path/to/image.png](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/ProblemaI.PNG)
+![Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/ProblemaI.PNG)
 
 ```julia
 include("testfunctions.jl"); include("projections.jl")
