@@ -18,3 +18,5 @@ Vamos resolver o seguinte problema de programação linear usando o JuMP e o GLP
 Aqui está o problema:
 
 ![alt text](ProblemaI.png "Title")
+
+as
