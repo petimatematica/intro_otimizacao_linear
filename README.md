@@ -57,3 +57,5 @@ println("Valor da função objetivo: ", objective_value(model))
 ```
 
 Rodando o código acima obtemos o seguinte resultado:
+![Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/Resultado.PNG)
+
