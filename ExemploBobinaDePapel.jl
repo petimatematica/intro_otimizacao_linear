@@ -3,12 +3,12 @@ using JuMP, GLPK # Carregando os pacotes necessários
 model = Model(GLPK.Optimizer)
 
 
-@variable(model, y1 >= 0.0, Int)
-@variable(model, y2 >= 0.0, Int)
-@variable(model, y3 >= 0.0, Int)
-@variable(model, y4 >= 0.0, Int)
-@variable(model, y5 >= 0.0, Int)
-@variable(model, y6 >= 0.0, Int)
+@variable(model, y1 >= 0.0, )
+@variable(model, y2 >= 0.0, )
+@variable(model, y3 >= 0.0, )
+@variable(model, y4 >= 0.0, )
+@variable(model, y5 >= 0.0, )
+@variable(model, y6 >= 0.0, )
 
 # @variables model begin # Inicializado as variáveis do problema
 #     y1 >= 0.0; y2 >= 0.0; y3 >= 0.0; y4 >= 0.0; y5 >= 0.0; y6 >= 0.0
@@ -22,7 +22,7 @@ constraint2 = @constraint(model, 8.0*0.1125*y2 + 4.0*0.1125*y5 == 3.5)
 constraint3 = @constraint(model, 7.0*0.1375*y3 + 4.0*0.1375*y5 + 4.0*0.1375*y6 == 4.0)
 constraint4 = @constraint(model, 6.0*0.15*y4 + 3.0*0.15*y6 == 5.0)
 
-map = relax_with_penalty!(model)
+#map = relax_with_penalty!(model)
 
 # Comando para o solver otimizar a função
 optimize!(model)
