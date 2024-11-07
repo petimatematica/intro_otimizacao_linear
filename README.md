@@ -19,12 +19,35 @@ Aqui está o problema:
 
 ![Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/ProblemaI.PNG)
 
+aqui está o código para resolver este problema:
+
 ```julia
-include("testfunctions.jl"); include("projections.jl")
+using JuMP # Carregar o JuMP
+using GLPK # Carregando o solver
 
-x0 = ones(100) # guess
-F = gradsumsquares # see testfunctions.jl for more details
-proj = projRplus # see projections.jl for more details
+model = Model(GLPK.Optimizer) #Criando um modelo passando um otimizador para a função Model
 
-x,k,t,nFx,Fevals,error=ding(x0,F,proj, maxiter=1.e4) # see search.jl for more details
+@variables model begin # Inicializado as variáveis do problema e algumas das restrições
+    x1 >= 320.0; x2 >= 380.0; x3 >= 450.0; x4 >= 240.0; x5 >= 280.0
+end
+
+# Determinar a função objetivo e especificar se o problema é de minimização ou de maximização
+@objective(model, Max, 0.80x1+0.70x2+1.15x3+1.30x4+0.70x5) # Neste caso o problema é de maximização
+
+# Restrições do problema
+@constraint(model, 0.70x1+0.40x2+0.40x3+0.60x4+0.60x5 <= 1200.0)
+@constraint(model, 0.16x1+0.22x2+0.32x3+0.19x4+0.23x5 <= 460.0)
+@constraint(model, 0.25x1+0.33x2+0.33x3+0.40x4+0.47x5 <= 650.0)
+@constraint(model, 0.05x1+0.12x2+0.09x3+0.04x4+0.16x5 <= 170.0)
+
+# Comando para o solver otimizar a função
+optimize!(model)
+
+# Valor das variáveis e valor ótimo da função objetivo
+println("Valor de x1: ", value(x1))
+println("Valor de x2: ", value(x2))
+println("Valor de x3: ", value(x3))
+println("Valor de x4: ", value(x4))
+println("Valor de x5: ", value(x5))
+println("Valor da função objetivo: ", objective_value(model))
 ```
