@@ -28,17 +28,21 @@ using GLPK # Carregando o solver
 model = Model(GLPK.Optimizer) #Criando um modelo passando um otimizador para a função Model
 
 @variables model begin # Inicializado as variáveis do problema e algumas das restrições
-    x1 >= 320.0; x2 >= 380.0; x3 >= 450.0; x4 >= 240.0; x5 >= 280.0
+    x1 >= 320.0 # Restrição 5
+    x2 >= 380.0 # Restrição 6
+    x3 >= 450.0 # Restrição 7
+    x4 >= 240.0 # Restrição 8
+    x5 >= 280.0 # Restrição 9
 end
 
 # Determinar a função objetivo e especificar se o problema é de minimização ou de maximização
 @objective(model, Max, 0.80x1+0.70x2+1.15x3+1.30x4+0.70x5) # Neste caso o problema é de maximização
 
 # Restrições do problema
-@constraint(model, 0.70x1+0.40x2+0.40x3+0.60x4+0.60x5 <= 1200.0)
-@constraint(model, 0.16x1+0.22x2+0.32x3+0.19x4+0.23x5 <= 460.0)
-@constraint(model, 0.25x1+0.33x2+0.33x3+0.40x4+0.47x5 <= 650.0)
-@constraint(model, 0.05x1+0.12x2+0.09x3+0.04x4+0.16x5 <= 170.0)
+@constraint(model, 0.70x1+0.40x2+0.40x3+0.60x4+0.60x5 <= 1200.0) # Restrição 1
+@constraint(model, 0.16x1+0.22x2+0.32x3+0.19x4+0.23x5 <= 460.0) # Restrição 2
+@constraint(model, 0.25x1+0.33x2+0.33x3+0.40x4+0.47x5 <= 650.0) # Restrição 3
+@constraint(model, 0.05x1+0.12x2+0.09x3+0.04x4+0.16x5 <= 170.0) # Restrição 4
 
 # Comando para o solver otimizar a função
 optimize!(model)
@@ -52,4 +56,4 @@ println("Valor de x5: ", value(x5))
 println("Valor da função objetivo: ", objective_value(model))
 ```
 
-Rodando o código acima 
+Rodando o código acima obtemos o seguinte resultado:
