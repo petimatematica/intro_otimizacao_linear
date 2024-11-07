@@ -71,5 +71,5 @@ include(Dir)
 
 onde Dir é uma String que contém o diretório do arquivo Julia do qual deseja-se rodar. Seja qual for o método para rodar o código utilizado obtém-se o seguinte resultado:
 
-![Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/REPL.PNG)
+![Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/Resultado.PNG)
 
