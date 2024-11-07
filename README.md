@@ -1,4 +1,5 @@
 ## Introdução
+Este repositório contém a implementação de alguns exemplos apresentado na apostila.
 
 ### O que é JuMP?
 
