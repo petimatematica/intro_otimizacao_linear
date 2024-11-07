@@ -51,3 +51,5 @@ println("Valor de x4: ", value(x4))
 println("Valor de x5: ", value(x5))
 println("Valor da função objetivo: ", objective_value(model))
 ```
+
+Rodando o código acima 
