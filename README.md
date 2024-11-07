@@ -58,7 +58,7 @@ println("Valor da função objetivo: ", objective_value(model))
 
 Para rodar o código acima no Visual Studio Code (uma vez que a extensão do Julia esteja instalada) clique aonde o cursor indica na imagem abaixo
 
-|[Aly text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/RodarI.PNG)
+|[Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/RodarI.PNG)
 
 ![Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/Resultado.PNG)
 
