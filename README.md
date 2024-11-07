@@ -56,6 +56,7 @@ println("Valor de x5: ", value(x5))
 println("Valor da função objetivo: ", objective_value(model))
 ```
 
-Rodando o código acima obtemos o seguinte resultado:
+Para rodar o código acima no Visual Studio Code
+
 ![Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/Resultado.PNG)
 
