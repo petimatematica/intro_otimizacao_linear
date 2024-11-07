@@ -60,7 +60,16 @@ Para rodar o código acima no Visual Studio Code (uma vez que a extensão do Jul
 
 ![Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/RodarI.png)
 
-asdasd
+No REPL do Julia
+
+![Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/REPL.PNG)
+
+rode o comando 
+'''julia
+include(Dir)
+```
+
+onde Dir é uma String que contém o diretório do arquivo Julia do qual deseja-se rodar. Seja qual for o método para rodar o código utilizado obtém-se o seguinte resultado:
 
 ![Alt text](https://github.com/petimatematica/intro_otimizacao_linear/blob/main/Resultado.PNG)
 
